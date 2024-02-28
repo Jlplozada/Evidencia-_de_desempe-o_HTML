@@ -6,8 +6,34 @@
   <title>Evidencia de desempeño</title>
 </head>
 <body>
-  <form action="Formulario.php">
+  <form action="Formulario.php" autocomplete="off" >
+    <p><b>Campos requeridos</b></p>
+    <p>Número Incidencia:</p>
+    <input type="text" name="Incidencia" id="incidencia" required placeholder="Q1167">
+    <p>Fecha/Hora de recepción</p>
+    <input type="datetime-local" name="recepción" id="recepción" required>
+    <p><b>Informacion del Usuario</b></p>
+    <p>Nombre del cliente</p>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" minlength="10" maxlength="30" required>
+    <p>Identificacion</p>
+    <input type="number" name="Identificacion" id="Identificacion" minlength="6" maxlength="20" placeholder="Documento Identidad" required >
+    <p>Tipo Identificacion</p>
+    <select name="Tipo_identificacion" id="Tipo_identificacion"required>
+      <option value="Tarjeta_identidad">Tarjeta Identidad</option>
+      <option value="Cedula_ciudadania" selected >Cedula Ciudadania</option>
+      <option value="Pasaporte">Pasaporte</option>
+    </select>
+    <p>Tipo de Solicitud</p>
+    <select name="Solicitud" id="Solicitud" required>
+      <option value="Estudiante">Estudiante</option>
+      <option value="Administrador">Administrador</option>
+      <option value="Docente" selected>Docente</option>
+    </select>
+    <p>E-mail:</p>
+    <input type="email" name="correo" id="correo" minlength="6" maxlength="20" placeholder="Correo " required>
+    <p><b>Informacion De Contacto</b></p>
 
+    <br><button type="submit">Enviar</button> 
   </form>
 </body>
 </html>
